@@ -1,0 +1,42 @@
+import { ITrack } from "../types/track.interface";
+
+export const createTrack = ({
+	id,
+	name,
+	filename,
+	path,
+	image,
+	duration,
+	createdAt,
+	album,
+	artist,
+	playlists = [],
+	likes = [],
+}: ITrack): ITrack => ({
+	id,
+	name,
+	filename,
+	path,
+	image,
+	duration,
+	createdAt,
+	album: {
+		id: album.id,
+		name: album.name,
+		image: album.image,
+		createdAt: "",
+		songs: [],
+		artist: [],
+		likes: [],
+	},
+	artist: {
+		id: artist.id,
+		name: artist.name,
+		image: "",
+		createdAt: "",
+		albums: [],
+		likes: [],
+	},
+	playlists,
+	likes,
+});

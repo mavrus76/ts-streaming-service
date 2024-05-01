@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+		"allowSyntheticDefaultImports": true,
+		"noImplicitAny": true,
+		"module": "esnext",
+		"target": "esnext",
+		"allowJs": true,
+		"moduleResolution": "node",
+		"paths": {
+			"~/*": ["./src/*"],
+			"@api/*": ["./src/api/*"],
+			"@auth/*": ["./src/auth/*"],
+			"@components/*": ["./src/components/*"],
+			"@core/*": ["./src/core/*"],
+			"@helpers/*": ["./src/helpers/*"],
+			"@utils/*": ["./src/utils/*"]
+		},
+		"types": ["jest", "node"]
+	},
+	"files": ["index.ts"],
+	"exclude": ["node_modules"]
+}
